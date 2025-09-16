@@ -1,5 +1,7 @@
 ---
+import Button from "../components/Button.astro";
 import Layout from "../layouts/Layout.astro";
+import Text from "../components/Text.astro";
 import "../styles/global.css";
 ---
 
@@ -30,38 +32,35 @@ import "../styles/global.css";
 
         <!-- WHO ARE WE -->
         <section class="py-16 md:py-20" id="about">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            <div class="lg:col-span-6">
-              <h2 class="uppercase tracking-wide text-xl md:text-2xl font-semibold">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+            <div class="lg:col-span-8">
+              <h2 class="font-h2 text-3xl md:text-7xl inline-flex items-end">
                 WHO ARE WE?
               </h2>
-              <div class="mt-4 space-y-4 text-sm md:text-base text-neutral-700">
-                <p>
-                  Instant Day is a small project run by lecturers from the Multimedia
-                  Design programme at KEA – together with students.
+              <div class="font-broedtekst font-thin">
+                <p class="max-w-full lg:max-w-2xl">
+                  Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme at EK - Business Academy Copenhagen.
                 </p>
-                <p>
-                  The competition is a fun, community-driven event to promote instant
-                  photography and have fun while doing it. Cheers.
+                <p class="max-w-full lg:max-w-2xl">
+                  Instant Day is a bi-annual project where lecturers and students collaborate on a digital design and communication project related to the Instant Day competition (this website). In essence, we bare just want to promote instant photography and have fun while doing it.
                 </p>
-                <p class="text-neutral-500">— The judges</p>
+                <p class="max-w-full lg:max-w-2xl">
+                  Cheers.
+                </p>
               </div>
             </div>
 
-            <div class="lg:col-span-6">
-              <!-- Placeholder image area matching the vibe of the page -->
-              <div class="aspect-[16/10] w-full border border-neutral-200 bg-white grid place-items-center text-neutral-400 text-sm">
-                Optional supporting image
-              </div>
+            <div class="lg:col-span-4 flex justify-end">
+              <!-- Ready for custom image -->
+              <img src="/grafik1.png" alt="Grafik 1" class="w-2/3 ml-32" />
             </div>
           </div>
         </section>
 
         <!-- JUDGES -->
         <section class="py-16 md:py-20" id="judges">
-          <h2 class="uppercase tracking-wide text-xl md:text-2xl font-semibold">
+          <h2 class="font-h2 text-3xl md:text-7xl inline-flex items-end">
             SUBMISSIONS WILL BE REVIEWED BY
-            <span class="text-rose-500" aria-hidden="true">•</span>
           </h2>
 
           <p class="mt-3 max-w-3xl text-sm md:text-base text-neutral-700">
