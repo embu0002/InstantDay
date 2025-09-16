@@ -7,105 +7,108 @@ const targetDate = new Date("2025-10-18T00:00:00").getTime();
 ---
 
 <Layout>
-  <div class="relative">
-    <img src="/heroforside.png" alt="herobillede" class="w-full h-auto" />
+  <section class="bg-[#FEF5E8]">
+    <div class="relative">
+      <img src="/heroforside.png" alt="herobillede" class="w-full h-auto" />
 
-    <div class="absolute inset-0 grid grid-cols-12 grid-rows-6 px-4 md:px-10">
-      <h1 class="col-span-12 md:col-span-10 row-start-4 font-H1 text-6xl md:text-9xl text-black leading-none">INSTANT DAY</h1>
+      <div class="absolute inset-0 grid grid-cols-12 grid-rows-6 px-4 md:px-10">
+        <h1 class="col-span-12 md:col-span-10 row-start-4 font-H1 text-6xl md:text-9xl text-black leading-none">INSTANT DAY</h1>
 
-      <div class="col-span-12 row-start-5 flex items-center justify-between gap-4 md:gap-8 mt-4">
-        <Button> SAVE THE DATE </Button>
-        <div id="countdown" class="flex items-center gap-4 md:gap-6 font-H1 text-3xl md:text-8xl leading-none">
-          <div class="text-center">
-            <span id="days">00</span>
-            <span class="block text-[10px] md:text-sm font-light tracking-[0.2em]">DAYS</span>
-          </div>
-          <span>:</span>
-          <div class="text-center">
-            <span id="hours">00</span>
-            <span class="block text-[10px] md:text-sm font-light tracking-[0.2em]">HOURS</span>
-          </div>
-          <span>:</span>
-          <div class="text-center">
-            <span id="minutes">00</span>
-            <span class="block text-[10px] md:text-sm font-light tracking-[0.2em]">MINUTES</span>
+        <div class="col-span-12 row-start-5 flex items-center justify-between gap-4 md:gap-8">
+          <Button> SAVE THE DATE </Button>
+          <div id="countdown" class="flex items-center gap-4 md:gap-6 font-H1 text-3xl md:text-8xl leading-none">
+            <div class="text-center">
+              <span id="days">00</span>
+              <span class="block text-[10px] md:text-sm font-light tracking-[0.2em]">DAYS</span>
+            </div>
+            <span>:</span>
+            <div class="text-center">
+              <span id="hours">00</span>
+              <span class="block text-[10px] md:text-sm font-light tracking-[0.2em]">HOURS</span>
+            </div>
+            <span>:</span>
+            <div class="text-center">
+              <span id="minutes">00</span>
+              <span class="block text-[10px] md:text-sm font-light tracking-[0.2em]">MINUTES</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <section class="bg-[#FEF5E8]">
-    <section class="px-6 md:px-30 py-12">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
-        <div class="flex flex-col justify-center text-black space-y-4">
-          <h2 class="font-h2 text-3xl md:text-8xl">WHAT IS INSTANT DAY</h2>
-          <p class="font-broedtekst font-thin">October 18 is Instant Day - a day all about celebrating instant photography. So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants. Instant Day isn’t really a photo competition, it’s more a homage to good old analogue, instant photography - everybody who participates are winners. But: We do have a nice prize for one lucky instant photographer!</p>
-        </div>
+    <main>
+      <div class="mx-auto px-6 md:px-20">
+        <!-- WHAT IS INSTANT DAY -->
+        <section class="py-16">
+          <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="flex flex-col justify-center text-black space-y-4">
+              <div class="flex items-start gap-1 md:gap-0 mb-4">
+                <h2 class="font-h2 text-3xl md:text-7xl inline-flex items-end">
+                  WHAT IS INSTANT DAY
+                  <img src="/sporgsmalstegn.svg" alt="?" class="w-5 md:w-10 ml-[2px]" />
+                </h2>
+              </div>
+              <p class="font-broedtekst font-thin">October 18 is Instant Day - a day all about celebrating instant photography. So get out your Polaroid, Instax or whatever instant photography camera you are using, and show us your instants. Instant Day isn’t really a photo competition, it’s more a homage to good old analogue, instant photography - everybody who participates are winners:-) But: We do have a nice prize for one lucky instant photographer!</p>
+            </div>
+            <div class="flex justify-center md:justify-end items-start">
+              <img class="w-80 md:w-[28rem]" src="/billede1.svg" alt="billede" />
+            </div>
+          </div>
+        </section>
 
-        <div class="flex justify-center items-start">
-          <img class="w-80 md:w-100" src="/billede1.svg" alt="billede" />
-        </div>
+        <!-- SHARE YOUR INSTANT -->
+        <section class="py-16">
+          <h2 class="font-h2 text-3xl md:text-7xl">GOT A PHOTO FOR INSTANT DAY? SHARE IT WITH THE WORLD!</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="flex justify-center md:justify-start">
+              <Button><a href="/share">SHARE YOUR INSTANT</a></Button>
+            </div>
+            <div class="flex justify-center">
+              <img class="w-56 md:w-80" src="/share.svg" alt="share illustration" />
+            </div>
+          </div>
+        </section>
+
+        <!-- WHY INSTANT PHOTO -->
+        <section class="py-16">
+          <div class="flex items-start gap-3 mb-6">
+            <h2 class="font-h2 text-3xl md:text-7xl">WHY INSTANT PHOTO</h2>
+            <img src="/sporgsmalstegn.svg" alt="?" class="w-5 md:w-10" />
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-8xl">
+            <p class="font-broedtekst font-thin">Instant Photography is a testament to life: It all started back in the 1940’s with a 3 year old kid. She wanted to see her fathers images right away. The father, Edwin Land, embarked on a mission: To invent instant photography. Half a decade later, Edwin Land launched Instant photography and established the Polaroid brand.</p>
+            <p class="font-broedtekst font-thin">Instant photography turned into big business in the 70’s and 80’s, until the digital era almost killed the industry. The massive amount of time wasted on the small screens have spurred a counterreaction: Analogue, off-line experiences have become popular again. And instant photography is just that: An analogue, life-affirming and tactile photography experience. So let’s celebrate life, and make memories.</p>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
+            <img src="/why1.svg" alt="why 1" class="w-64 max-w-full" />
+            <img src="/why2.svg" alt="why 2" class="w-64 max-w-full" />
+            <img src="/why3.svg" alt="why 3" class="w-64 max-w-full" />
+            <img src="/why4.svg" alt="why 4" class="w-64 max-w-full" />
+          </div>
+        </section>
+
+        <!-- GET SOME INSPIRATION -->
+        <section class="py-16">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div class="order-1 md:order-2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+              <h2 class="font-h2 text-3xl md:text-7xl">GET SOME INSPIRATION</h2>
+              <Button><a href="/vn">SEE THE 2025 CONTRIBUTIONS</a></Button>
+            </div>
+
+            <div class="order-2 md:order-1 grid grid-cols-2 md:grid-cols-3 gap-4">
+              <img src="/i1.png" alt="" class="w-50" />
+              <img src="/i2.png" alt="" class="w-50" />
+              <img src="/i3.png" alt="" class="w-50" />
+              <img src="/i4.png" alt="" class="w-50" />
+              <img src="/i5.png" alt="" class="w-50" />
+              <img src="/i6.png" alt="" class="w-50" />
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-
-    <section class="px-6 md:px-30 py-12">
-      <h2 class="font-h2 text-2xl md:text-5xl max-w-4xl mb-10">Got a photo for Instant Day? Share it with the world!</h2>
-
-      <div class="mx-auto grid grid-cols-2 gap-5 md:gap-20 items-center">
-        <div class="flex justify-center md:justify-start">
-          <Button>
-            <a href="/share">SHARE YOUR INSTANT</a>
-          </Button>
-        </div>
-
-        <div class="flex justify-center">
-          <img class="w-50 md:w-100" src="/share.svg" alt="share illustration" />
-        </div>
-      </div>
-    </section>
-
-    <section class="px-6 md:px-20 py-12">
-      <div class="max-w-7xl mx-auto">
-        <div class="flex items-start gap-3">
-          <h2 class="font-h2 text-3xl md:text-7xl">WHY INSTANT PHOTO</h2>
-          <img src="/sporgsmalstegn.svg" alt="?" class="w-5 md:w-10" />
-        </div>
-
-        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl">
-          <p class="font-broedtekst font-thin">Instant Photography is a testament to life: It all started back in the 1940’s with a 3 year old kid. She wanted to see her fathers images right away. The father, Edwin Land, embarked on a mission: To invent instant photography. Half a decade later, Edwin Land launched Instant photography and established the Polaroid brand.</p>
-          <p class="font-broedtekst font-thin">Instant photography turned into big business in the 70’s and 80’s, until the digital era almost killed the industry. The massive amount of time wasted on the small screens have spurred a counterreaction: Analogue, off-line experiences have become popular again. And instant photography is just that: An analogue, life-affirming and tactile photography experience. So let’s celebrate life, and make memories.</p>
-        </div>
-
-        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
-          <img src="/why1.svg" alt="why 1" class="w-64 max-w-full" />
-          <img src="/why2.svg" alt="why 2" class="w-64 max-w-full" />
-          <img src="/why3.svg" alt="why 3" class="w-64 max-w-full" />
-          <img src="/why4.svg" alt="why 4" class="w-64 max-w-full" />
-        </div>
-      </div>
-    </section>
-
-    <section class="px-6 md:px-20 py-12">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
-        <div class="order-1 md:order-2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
-          <h2 class="font-h2 text-3xl md:text-7xl">GET SOME INSPIRATION</h2>
-
-          <Button>
-            <a href="/vn">SEE THE 2025 CONTRIBUTIONS</a>
-          </Button>
-        </div>
-
-        <div class="order-2 md:order-1 grid grid-cols-2 gap-1">
-          <img src="/i1.png" alt="billede af havre" class="w-30 md:w-40" />
-          <img src="/i2.png" alt="billede af skorsten" class="w-30 md:w-40" />
-          <img src="/i3.png" alt="billede af tårn" class="w-30 md:w-40" />
-          <img src="/i4.png" alt="billede" class="w-30 md:w-40" />
-          <img src="/i5.png" alt="billede" class="w-30 md:w-40" />
-          <img src="/i6.png" alt="billede" class="w-30 md:w-40" />
-        </div>
-      </div>
-    </section>
+    </main>
   </section>
 </Layout>
 
