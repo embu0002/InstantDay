@@ -1,3 +1,217 @@
 ---
 import "../styles/global.css";
+import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
 ---
+
+<Layout>
+  <main class="bg-[#FEF5E8]">
+    <!-- HERO -->
+    <section></section>
+    <!-- READY TO -->
+    <div class="mx-auto px-10 md:px-20">
+      <section>
+        <div class="flex flex-row justify-center text-black mb-5">
+          <h2 class="font-h2 text-3xl md:text-7xl">READY TO SHARE YOUR INSTANTS?</h2>
+          <img class="w-20" src="/shareside.svg" alt="share billede" />
+        </div>
+        <p class="font-broedtekst font-thin mb-30">Got an instant photo ready for the public? In order to take part in Instant Day:</p>
+      </section>
+      <!-- HOW TO -->
+      <section class="grid md:grid-cols-2 md:grid-rows-2 max-w-8xl">
+        <div class="mb-15 grid md:grid-cols-2">
+          <div>
+            <h4 class="mb-5">1. Take a photo</h4>
+            <p class="font-broedtekst font-thin mb-5">Take a photo of your instant with your smartphone (or scan it for max. quality) - the file should be between 2 - 10 MB, in jpg/jpeg or webp format.</p>
+          </div>
+          <img class="w-50 mx-auto" src="/share.svg" alt="share" />
+        </div>
+
+        <div class="mb-15 grid md:grid-cols-2">
+          <div>
+            <h4 class="mb-5">2. Upload your photo</h4>
+            <p class="font-broedtekst font-thin mb-5">Upload your photo and credentials on [link til din “share your instants” side]</p>
+          </div>
+          <img class="w-50 mx-auto" src="/upload1.svg" alt="share" />
+        </div>
+
+        <div class="mb-15 grid md:grid-cols-2">
+          <div>
+            <h4 class="mb-5">3. Agree to terms</h4>
+            <p class="font-broedtekst font-thin mb-5">Agree to our terms and conditions [link til din “terms and conditions” sektion på “share your instants” siden]. The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.</p>
+          </div>
+          <img class="w-50 mx-auto" src="/agree.svg" alt="share" />
+        </div>
+
+        <div class="mb-15 grid md:grid-cols-2">
+          <div>
+            <h4 class="mb-5">4. Make up to 5 submissions</h4>
+            <p class="font-broedtekst font-thin mb-5">You can make up to 5 submissions - go through step 1-3 for each submission</p>
+          </div>
+          <img class="w-50 mx-auto" src="/submissions.svg" alt="share" />
+        </div>
+      </section>
+    </div>
+
+    <!-- Submit -->
+    <section class="py-16">
+      <h2 class="font-broedtekst text-3xl md:text-7xl text-center mb-7 md:mb-20">SUBMIT YOUR INSTANT</h2>
+
+      <div id="envelopeStage" class="relative mx-auto w-[320px] md:w-[520px] scale-125 md:scale-200 transition-all duration-500">
+        <!-- Lukket kuvert -->
+        <img class="envelope-img block w-full select-none pointer-events-none" src="/lukketkurvert.png" alt="Lukket kuvert" />
+
+        <!-- Åben kuvert (ligger præcis ovenpå) -->
+        <img class="envelope-open absolute inset-0 w-full opacity-0 pointer-events-none transition-opacity duration-500" src="/abenkuvert.png" alt="Åben kuvert" />
+
+        <!-- Knap -->
+        <button id="envelopeButton" class="btn-seal absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 focus:outline-none" aria-expanded="false" aria-controls="instantFormWrap">
+          <img class="w-15 md:w-22" src="/knapkurvert.png" alt="Åbn kuverten" />
+        </button>
+
+        <!-- Formular-kort ovenpå åben kuvert -->
+        <div id="instantFormWrap" class="form-card absolute left-[82%] top-[0%] -translate-x-1/2 w-[75%] md:w-[65%]
+            bg-white/95 shadow-sm p-6 opacity-0 pointer-events-none
+            transition-all duration-500">
+          <form id="instantForm" class="typewriter space-y-2 text-sm">
+            <h3 class="text-lg font-semibold">SHARE YOUR INSTANT</h3>
+
+            <!-- Full name -->
+            <div class="line-row">
+              <span>Full name</span>
+              <input id="fullName" name="fullName" type="text" class="line-input" autocomplete="name" />
+            </div>
+
+            <!-- E-mail -->
+            <div class="line-row">
+              <span>E-mail</span>
+              <input id="email" name="email" type="email" class="line-input" autocomplete="email" />
+            </div>
+
+            <!-- Photo upload -->
+            <div class="line-row">
+              <span>Photo upload</span>
+              <label for="photo" class="btn-file inline-flex items-center rounded-md border border-neutral-800 px-1 py-1 hover:bg-neutral-100"> UPLOAD PHOTO </label>
+              <input id="photo" name="photo" type="file" accept="image/*" class="sr-only" />
+              <span id="photoName" class="text-sm text-neutral-500"></span>
+            </div>
+
+            <!-- Submission title -->
+            <div class="line-row">
+              <span>Submission title</span>
+              <input id="title" name="title" type="text" class="line-input" />
+            </div>
+
+            <!-- Submission description/story -->
+            <div class="space-y-1">
+              <span>Submission description/story - describe the image and how you took it in a sentence or two</span>
+              <textarea id="story" name="story" rows="1" class="line-input w-full border-b-2 border-neutral-800 pb-1"></textarea>
+            </div>
+
+            <!-- Terms -->
+            <label class="flex items-start gap-3 select-none">
+              <input id="terms" name="terms" type="checkbox" class="mt-1 h-4 w-4 rounded border-neutral-400 text-neutral-900 focus:ring-neutral-900" />
+              <span>I have read and agree to the terms and conditions</span>
+            </label>
+
+            <button type="submit" class="text-red-600">SUBMIT</button>
+            <p id="formMsg" class="hidden text-sm mt-2"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main></Layout
+>
+
+<style>
+  .envelope-img {
+    z-index: 10;
+  }
+  .envelope-open {
+    z-index: 10;
+  }
+  .btn-seal {
+    z-index: 30;
+  }
+  .form-card {
+    z-index: 20;
+    border-radius: 0.5rem;
+    transform-origin: top center;
+  }
+
+  /* Når scenen får klassen .open: åben kuvert + form fade/slide ind, knappen væk */
+  #envelopeStage.open .envelope-open {
+    opacity: 1;
+  }
+  #envelopeStage.open .btn-seal {
+    opacity: 0;
+    pointer-events: none;
+  }
+  #envelopeStage.open .form-card {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Startposition for form: lidt “nede i kuverten” */
+  #envelopeStage .form-card {
+    transform: translateX(-50%) translateY(10px);
+  }
+  .typewriter {
+    font-family: "Courier Prime", monospace;
+  }
+  /* “linje” felter */
+  .line-row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .line-input {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 0.25rem 0.25rem 0.1rem 0.25rem;
+  }
+  .underline {
+    border-bottom: 2px solid #1f2937; /* neutral-800 */
+    flex: 1 1 auto;
+    min-width: 0; /* så linjen bliver ved teksten */
+    height: 1.4em;
+    align-self: baseline;
+  }
+  .line-input:focus + .underline {
+    box-shadow: inset 0 -2px 0 #111827;
+  }
+  .btn-file {
+    cursor: pointer;
+  }
+</style>
+<script>
+  // Åbn kuverten
+  const stage = document.getElementById("envelopeStage");
+  const openBtn = document.getElementById("envelopeButton");
+  openBtn.addEventListener("click", () => {
+    stage.classList.add("open");
+    openBtn.setAttribute("aria-expanded", "true");
+  });
+
+  // Foto-navn på upload
+  const photo = document.getElementById("photo");
+  const photoName = document.getElementById("photoName");
+  photo.addEventListener("change", () => {
+    photoName.textContent = photo.files?.[0]?.name || "";
+  });
+
+  // Falsk submit feedback (kan erstattes med rigtig backend)
+  const form = document.getElementById("instantForm");
+  const msg = document.getElementById("formMsg");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    msg.className = "typewriter text-sm mt-2 text-green-700";
+    msg.textContent = "Tak! Din indsendelse er modtaget.";
+    form.reset();
+    photoName.textContent = "";
+  });
+</script>
