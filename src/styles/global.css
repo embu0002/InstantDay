@@ -4,7 +4,7 @@
   --background: #fef5e8;
   --red: #bf0203;
   --black: #000000;
-  --font-h1: "Playfair Display", serif;
+  --font-H1: "Playfair Display", serif;
   --font-h2: "Montserrat", sans-serif;
   --font-broedtekst: "Courier Prime", monospace;
 }
@@ -12,6 +12,12 @@
 @layer base {
   .font-broedtekst {
     font-family: var(--font-broedtekst);
+  }
+  .font-H1 {
+    font-family: var(--font-H1);
+  }
+  .font-h2 {
+    font-family: var(--font-h2);
   }
   *,
   ::after,
