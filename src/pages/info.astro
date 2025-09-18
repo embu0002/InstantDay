@@ -32,8 +32,14 @@ import "../styles/global.css";
 
         <!-- WHO ARE WE -->
         <section class="py-16 md:py-20" id="about">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-            <div class="lg:col-span-8">
+          <div class="flex flex-col lg:grid lg:grid-cols-12 gap-0 lg:gap-10 lg:items-end">
+            <!-- Image - shows first on mobile, second on desktop -->
+            <div class="order-1 lg:order-2 lg:col-span-4 flex justify-end">
+              <img src="/grafik1.png" alt="Grafik 1" class="w-1/4 ml-auto lg:w-2/3 lg:ml-32" />
+            </div>
+            
+            <!-- Text content - shows second on mobile, first on desktop -->
+            <div class="order-2 lg:order-1 lg:col-span-8 -mt-4 lg:mt-0">
               <h2 class="font-h2 text-3xl md:text-7xl inline-flex items-end">
                 WHO ARE WE?
               </h2>
@@ -48,10 +54,6 @@ import "../styles/global.css";
                   Cheers.
                 </p>
               </div>
-            </div>
-
-            <div class="lg:col-span-4 flex justify-end">
-              <img src="/grafik1.png" alt="Grafik 1" class="w-2/3 ml-32" />
             </div>
           </div>
         </section>
