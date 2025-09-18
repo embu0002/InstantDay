@@ -1,214 +1,205 @@
 ---
 import "../styles/global.css";
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 import Text from "../components/Text.astro";
 ---
 
 <Layout>
-    <section>
-
-        <div>
-            <h2>WINNERS & NOMINEES</h2>
-            <p>We are thrilled to present the 12 talented nominees who have been selected for this year's Instant Day competition. Each nominee has shown remarkable creativity and dedication, and their work truly stands out.
-
-                The winners of the competition will be announced on the official website and/or social media platforms of the organizers, so be sure to follow along to see who takes home the top prizes. Stay tuned for an exciting celebration of innovation and talent!</p>
+  <main class="bg-[#FEF5E8]">
+    <!-- HERO -->
+    <section class="mb-10 md:mb-20">
+      <div class="relative">
+        <div class="relative w-full bg-[#FEF5E8] flex flex-col items-start justify-start">
+          <h1 class="font-serif text-[100px] md:text-[180px] leading-none font-bold pl-2 pt-2 pb-3 md:pb-0" style="
+            background: url('/vnhero.png') center/cover no-repeat;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+          ">Best of 2025</h1>
+          <img src="/vnhero.png" alt="Hero background" class="w-full h-[340px] md:h-[600px] object-cover -mt-7" />
         </div>
-
+      </div>
+    </section>
+    <div class="mx-auto px-10 md:px-20">
+      <section>
+        <div class="flex flex-row text-black mb-5">
+          <h2 class="font-h2 text-3xl md:text-7xl">WINNERS & NOMINEES</h2>
+          <img class="w-30 ml-14" src="/grafik2.png" alt="share billede" />
+        </div>
+        <p class="font-broedtekst font-thin mb-30">We are thrilled to present the 12 talented nominees who have been selected for this year's Instant Day competition. Each nominee has shown remarkable creativity and dedication, and their work truly stands out. The winners of the competition will be announced on the official website and/or social media platforms of the organizers, so be sure to follow along to see who takes home the top prizes. Stay tuned for an exciting celebration of innovation and talent!</p>
+      </section>
+      <section>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-
-            <div class="text-center">
-                <div class="flex justify-center">
-                <div class="relative group">
-                <img src="/amagerfaelled.png" alt="Amager Fælled">
-                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm 
+          <div class="text-center">
+            <div class="flex justify-center">
+              <div class="relative group">
+                <img src="/amagerfaelled.png" alt="Amager Fælled" />
+                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm
                 opacity-0 group-hover:opacity-100 transition-opacity">
-                 <p>
-                     Description/story: A little snap from Amager Fælled, a large common in the southwestern part of Copenhagen, Denmark. 
-                     Taken with a Lomomatic Square.
-                 </p>
-             </div>
-            </div>
+                  <p>Description/story: A little snap from Amager Fælled, a large common in the southwestern part of Copenhagen, Denmark. Taken with a Lomomatic Square.</p>
+                </div>
+              </div>
             </div>
             <h3 class="mt-2 text-lg font-semibold">Amager fælled</h3>
             <h4 class="text-sm text-gray-600">Sten Fager</h4>
-            </div>
-            
-            <div class="text-center">
-                <div class="flex justify-center">
-                <div class="relative group">
-                    <img src="/amagerforbrænding.png" alt="Amager Forbrænding">
-                    <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm 
-                    opacity-0 group-hover:opacity-100 transition-opacity">
-                     <p>
-                        Description/story: I'd give my right arm for a cigarette. Taken with a Lomomatic Square.
-                     </p>
-                 </div>
-                </div>
-                </div>
-                <h3 class="mt-2 text-lg font-semibold">Amager forbrænding</h3>
-                <h4 class="text-sm text-gray-600">Sara Gente</h4>
-            </div>
+          </div>
 
-        <div class="text-center">
+          <div class="text-center">
             <div class="flex justify-center">
-            <div class="relative group">
-            <img src="/amagerstrand.png" alt="Amager Strand">
-            <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm 
-                opacity-0 group-hover:opacity-100 transition-opacity">
-                 <p>
-                    Description/story: From this angle, copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter.
-                 </p>
-             </div>
+              <div class="relative group">
+                <img src="/amagerforbrænding.png" alt="Amager Forbrænding" />
+                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm
+                    opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p>Description/story: I'd give my right arm for a cigarette. Taken with a Lomomatic Square.</p>
+                </div>
+              </div>
             </div>
+            <h3 class="mt-2 text-lg font-semibold">Amager forbrænding</h3>
+            <h4 class="text-sm text-gray-600">Sara Gente</h4>
+          </div>
+
+          <div class="text-center">
+            <div class="flex justify-center">
+              <div class="relative group">
+                <img src="/amagerstrand.png" alt="Amager Strand" />
+                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm
+                opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p>Description/story: From this angle, copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter.</p>
+                </div>
+              </div>
             </div>
             <h3 class="mt-2 text-lg font-semibold">Amager Strand</h3>
             <h4 class="text-sm text-gray-600">Tage Frens</h4>
-        </div>
+          </div>
 
-        <div class="text-center">
+          <div class="text-center">
             <div class="flex justify-center">
-            <div class="relative group">
-            <img src="/orestad.png" alt="Ørestad">
-            <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm 
+              <div class="relative group">
+                <img src="/orestad.png" alt="Ørestad" />
+                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm
             opacity-0 group-hover:opacity-100 transition-opacity">
-             <p>
-                Description/story: A double exposure from my neighbourhood, Ørestad. Taken with a Lomomatic Square.
-             </p>
-         </div>
-        </div>
-        </div>
+                  <p>Description/story: A double exposure from my neighbourhood, Ørestad. Taken with a Lomomatic Square.</p>
+                </div>
+              </div>
+            </div>
             <h3 class="mt-2 text-lg font-semibold">2 x Ørestad</h3>
             <h4 class="text-sm text-gray-600">Agnes Fret</h4>
-        </div>
+          </div>
 
-        <div class="text-center">
+          <div class="text-center">
             <div class="flex justify-center">
-            <div class="relative group">
-            <img src="/loserupstrand.png" alt="Løserup Strand">
-            <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm 
+              <div class="relative group">
+                <img src="/loserupstrand.png" alt="Løserup Strand" />
+                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm
             opacity-0 group-hover:opacity-100 transition-opacity">
-             <p>
-                Description/story: Too cold to take a dip. So I took a photo instead. The polaroid had an awful magenta color cast, but I ended up liking it. Taken with a Polaroid Now+ gen 2 and an i-Type film, which I probably stored incorrectly.
-             </p>
-         </div>
-        </div>
-        </div>
+                  <p>Description/story: Too cold to take a dip. So I took a photo instead. The polaroid had an awful magenta color cast, but I ended up liking it. Taken with a Polaroid Now+ gen 2 and an i-Type film, which I probably stored incorrectly.</p>
+                </div>
+              </div>
+            </div>
             <h3 class="mt-2 text-lg font-semibold">Løserup Strand</h3>
             <h4 class="text-sm text-gray-600">Sven Tager</h4>
-        </div>
+          </div>
 
-            <div class="text-center">
-                <div class="flex justify-center">
-                <div class="relative group">
-            <img src="/newmeetsold.png" alt="New meets old">
-            <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm 
+          <div class="text-center">
+            <div class="flex justify-center">
+              <div class="relative group">
+                <img src="/newmeetsold.png" alt="New meets old" />
+                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm
             opacity-0 group-hover:opacity-100 transition-opacity">
-             <p>
-                Description/story: I wanted to catch the new city development district, Ørestad, in a shade of old school. So I used a Polaroid Now+ gen 2 in tripod mode with an i-Type black and white film in order to make a long exposure.
-             </p>
-         </div>
-        </div>
-        </div>
+                  <p>Description/story: I wanted to catch the new city development district, Ørestad, in a shade of old school. So I used a Polaroid Now+ gen 2 in tripod mode with an i-Type black and white film in order to make a long exposure.</p>
+                </div>
+              </div>
+            </div>
             <h3 class="mt-2 text-lg font-semibold">New meets old</h3>
             <h4 class="text-sm text-gray-600">Ester Fang</h4>
-        </div>
+          </div>
 
-            <div class="text-center">
-                <div class="flex justify-center">
-                <div class="relative group">
-            <img src="/karlstrupkaffe.png" alt="Karlstrup og kaffe">
-            <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm 
+          <div class="text-center">
+            <div class="flex justify-center">
+              <div class="relative group">
+                <img src="/karlstrupkaffe.png" alt="Karlstrup og kaffe" />
+                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm
             opacity-0 group-hover:opacity-100 transition-opacity">
-             <p>
-                Description/story: The scenic beauty of a former lime pit with a twist of coffee: The polaroid was soaked in coffee for a couple of weeks. That gave it a nice tan. Polaroid flip.
-             </p>
-         </div>
-        </div>
-        </div>
+                  <p>Description/story: The scenic beauty of a former lime pit with a twist of coffee: The polaroid was soaked in coffee for a couple of weeks. That gave it a nice tan. Polaroid flip.</p>
+                </div>
+              </div>
+            </div>
             <h3 class="mt-2 text-lg font-semibold">Karlstrup & coffee</h3>
             <h4 class="text-sm text-gray-600">Frans Geate</h4>
-        </div>
+          </div>
 
-            <div class="text-center">
-                <div class="flex justify-center">
-                <div class="relative group">
-            <img src="/amagerstrandnat.png" alt="Amager strand nat">
-            <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm 
+          <div class="text-center">
+            <div class="flex justify-center">
+              <div class="relative group">
+                <img src="/amagerstrandnat.png" alt="Amager strand nat" />
+                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm
             opacity-0 group-hover:opacity-100 transition-opacity">
-             <p>
-                Description/story: Amager Strand, Copenhagen. Locally referred to as Copenhagens mini-manhattan. Long exposure, Polaroid Now+ gen 2 in manual mode with an i-Type color film in order to make a long exposure.
-             </p>
-         </div>
-        </div>
-        </div>
+                  <p>Description/story: Amager Strand, Copenhagen. Locally referred to as Copenhagens mini-manhattan. Long exposure, Polaroid Now+ gen 2 in manual mode with an i-Type color film in order to make a long exposure.</p>
+                </div>
+              </div>
+            </div>
             <h3 class="mt-2 text-lg font-semibold">Amager Strand at night</h3>
             <h4 class="text-sm text-gray-600">Greta Fens</h4>
-        </div>
+          </div>
 
-            <div class="text-center">
-                <div class="flex justify-center">
-                <div class="relative group">
-            <img src="/closetothesea.png" alt="Close to the Sea">
-            <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm 
+          <div class="text-center">
+            <div class="flex justify-center">
+              <div class="relative group">
+                <img src="/closetothesea.png" alt="Close to the Sea" />
+                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm
             opacity-0 group-hover:opacity-100 transition-opacity">
-             <p>
-                Description/story: Amager Strand is close to the sea. So I wanted to give this polaroid a twist of water: The polaroid soaked for around three weeks in water. I used a Polaroid Now+ gen 2.
-             </p>
-         </div>
-        </div>
-        </div>
+                  <p>Description/story: Amager Strand is close to the sea. So I wanted to give this polaroid a twist of water: The polaroid soaked for around three weeks in water. I used a Polaroid Now+ gen 2.</p>
+                </div>
+              </div>
+            </div>
             <h3 class="mt-2 text-lg font-semibold">Close to the sea</h3>
             <h4 class="text-sm text-gray-600">Arne Gestaf</h4>
-        </div>
+          </div>
 
-            <div class="text-center">
-                <div class="flex justify-center">
-                <div class="relative group">
-            <img src="/nordhavnnat.png" alt="Nordhavn nat">
-            <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm 
+          <div class="text-center">
+            <div class="flex justify-center">
+              <div class="relative group">
+                <img src="/nordhavnnat.png" alt="Nordhavn nat" />
+                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm
             opacity-0 group-hover:opacity-100 transition-opacity">
-             <p>
-                Description/story: Nordhavn, Copenhagen, at night. Long exposure with expired film. I used a Polaroid Flip in manual mode with an i-Type film in order to make a long exposure.
-             </p>
-         </div>
-        </div>
-        </div>
+                  <p>Description/story: Nordhavn, Copenhagen, at night. Long exposure with expired film. I used a Polaroid Flip in manual mode with an i-Type film in order to make a long exposure.</p>
+                </div>
+              </div>
+            </div>
             <h3 class="mt-2 text-lg font-semibold">Nordhavn at night</h3>
             <h4 class="text-sm text-gray-600">Stina Fager</h4>
-        </div>
+          </div>
 
-            <div class="text-center">
-                <div class="flex justify-center">
-                <div class="relative group">
-            <img src="/beerbeach.png" alt="Beer Beach">
-            <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm 
+          <div class="text-center">
+            <div class="flex justify-center">
+              <div class="relative group">
+                <img src="/beerbeach.png" alt="Beer Beach" />
+                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm
             opacity-0 group-hover:opacity-100 transition-opacity">
-             <p>
-                Description/story: Løserup strand in Holbæk. I often go there to quelch beer. So I wanted to give this polaroid a twist of beer: The polaroid soaked for around three weeks in Pripps blå - a cheap, swedish beer. I used a Polaroid Flip and expired film.
-             </p>
-         </div>
-        </div>
-        </div>
+                  <p>Description/story: Løserup strand in Holbæk. I often go there to quelch beer. So I wanted to give this polaroid a twist of beer: The polaroid soaked for around three weeks in Pripps blå - a cheap, swedish beer. I used a Polaroid Flip and expired film.</p>
+                </div>
+              </div>
+            </div>
             <h3 class="mt-2 text-lg font-semibold">Beer beach</h3>
             <h4 class="text-sm text-gray-600">Rene Gasta</h4>
-        </div>
+          </div>
 
-            <div class="text-center">
-                <div class="flex justify-center">
-                <div class="relative group">
-            <img src="/beerabstract.png" alt="Beer Abstract">
-            <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm 
+          <div class="text-center">
+            <div class="flex justify-center">
+              <div class="relative group">
+                <img src="/beerabstract.png" alt="Beer Abstract" />
+                <div class="absolute inset-0 flex items-center justify-center bg-white/30 backdrop-blur-sm text-black text-sm
             opacity-0 group-hover:opacity-100 transition-opacity">
-             <p>
-                Description/story: Løserup strand in Holbæk. The polaroid was soaked in beer for around three weeks, which turned the landscape into an unrecognizable pattern of colors. I used a Polaroid Flip, expired film and a can of Pripps blå beer.
-             </p>
-         </div>
-        </div>
-        </div>
+                  <p>Description/story: Løserup strand in Holbæk. The polaroid was soaked in beer for around three weeks, which turned the landscape into an unrecognizable pattern of colors. I used a Polaroid Flip, expired film and a can of Pripps blå beer.</p>
+                </div>
+              </div>
+            </div>
             <h3 class="mt-2 text-lg font-semibold">Beer abstract</h3>
             <h4 class="text-sm text-gray-600">Anna Grest</h4>
+          </div>
         </div>
-        </div>
-    </section>
-
+      </section>
+    </div>
+  </main>
 </Layout>
