@@ -59,15 +59,21 @@ import "../styles/global.css";
         </section>
 
         <!-- JUDGES -->
-        <section class="py-16 md:py-20" id="judges">
-          <h2 class="font-h2 text-3xl md:text-7xl inline-flex items-end">
+        <section class="py-16 md:py-20 relative" id="judges">
+          <!-- Grafik 2 - øverst til venstre -->
+          <img src="/grafik2.png" alt="Grafik 2" class="absolute top-0 left-0 w-20 md:w-32 z-10" />
+          
+          <h2 class="font-h2 text-3xl md:text-7xl inline-flex items-end relative z-20">
             SUBMISSIONS WILL BE REVIEWED BY
           </h2>
 
-          <p class="font-broedtekst font-thin mt-3 max-w-3xl text-sm md:text-base text-neutral-700">
+          <p class="font-broedtekst font-thin mt-3 max-w-3xl text-sm md:text-base text-neutral-700 relative z-20">
             The competition will be evaluated by assistant lecturers from the Multimedia
             Design programme at KEA as well as students enrolled in the programme.
           </p>
+
+          <!-- Grafik 3 - nederst til højre -->
+          <img src="/grafik3.svg" alt="Grafik 3" class="absolute bottom-0 right-0 w-24 md:w-40 z-10" />
 
           <ul class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
             <li class="relative text-center">
