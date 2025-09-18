@@ -1,0 +1,96 @@
+---
+
+---
+
+<style>
+  dialog::backdrop {
+    background: var(--background);
+  }
+
+  @keyframes popin {
+    from {
+      transform: translateY(4px) scale(0.98);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+
+<dialog id="thanks-popup" class="m-0 p-0 w-full max-w-[980px] paper bg-[#FEF5E8] 10 overflow-hidden open:animate-[popin_.15s_ease-out]" aria-labelledby="thanks-heading">
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 px-4 sm:px-6 pt-6 pb-6 md:pt-8 md:pb-10">
+    <!-- Venstre: overskrift + tekst -->
+    <div class="relative">
+      <div class="relative">
+        <h1 id="thanks-heading" class="font-H1">THANKS</h1>
+        <!-- Rødt udråbstegn placeret tæt på overskrift -->
+        <img src="/udrab.svg" alt="udråbstegn" class="pointer-events-none select-none absolute -right-2 -top-3 md:-right-3 md:-top-1 w-[10vw] min-w-[15px] md:w-[20px]" />
+      </div>
+
+      <p class="mt-5 md:mt-6 text-[15px] leading-[1.5] md:text-[16px] text-black/85 max-w-prose">
+        You’re an instant champ! Thanks for the contribution.<br /><br />
+        The competition runs until October 18. Shortly after, we will review all the images, and announce a winner on October 31.<br /><br />
+        If you’re one of the lucky winners or nominees, we will contact you by e-mail.
+        <br />Good luck!<br /><br />
+        <span class="font-medium">NB!</span> Want to make one more submission? Start the submission form over.
+      </p>
+    </div>
+
+    <!-- Højre: billede + pil + lille luk-knap -->
+    <div class="relative">
+      <div class="relative overflow-hidden bg-black/5">
+        <!-- INGEN CSS-blur – billedet har det allerede -->
+        <img src="/popup.png" alt="billede af mand" class="w-full aspect-[4/3] object-cover" />
+
+        <!-- Rød pil ovenpå -->
+        <img src="/pil.svg" alt="pil" class="pointer-events-none select-none absolute right-10 top-9 w-[55%] md:w-[52%] rotate-[2deg]" />
+
+        <!-- Lille luk-knap ved pilen -->
+        <button id="tp-close-small" aria-label="Close" class="absolute top-2 right-2 z-10 inline-flex items-center justify-center
+                 w-8 h-8 rounded-full bg-white/95 text-black border border-black/15
+                 hover:bg-black hover:text-white transition"> ✕ </button>
+      </div>
+    </div>
+  </section>
+</dialog>
+
+<script>
+  const dlg = document.getElementById("thanks-popup");
+  const closeBtn = document.getElementById("tp-close");
+  const closeSmall = document.getElementById("tp-close-small");
+
+  function showThanksPopup() {
+    if (!dlg.open) dlg.showModal();
+  }
+  function hideThanksPopup() {
+    if (dlg.open) dlg.close();
+  }
+
+  // Gør tilgængelig globalt for Share-siden
+  window.showThanksPopup = showThanksPopup;
+  window.hideThanksPopup = hideThanksPopup;
+
+  // Luk-knapper
+  closeBtn?.addEventListener("click", hideThanksPopup);
+  closeSmall?.addEventListener("click", hideThanksPopup);
+
+  // Klik på backdrop lukker (klik udenfor dialog-rect)
+  dlg.addEventListener("click", (e) => {
+    const rect = dlg.getBoundingClientRect();
+    const inside = e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
+    if (!inside) hideThanksPopup();
+  });
+
+  // Esc lukker
+  dlg.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") hideThanksPopup();
+  });
+</script>
+
+<style is:global>
+  .font-serif {
+    font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  }
+</style>

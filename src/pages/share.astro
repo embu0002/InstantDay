@@ -2,12 +2,26 @@
 import "../styles/global.css";
 import Button from "../components/Button.astro";
 import Layout from "../layouts/Layout.astro";
+import Popup from "../components/Popup.astro";
 ---
 
 <Layout>
   <main class="bg-[#FEF5E8]">
     <!-- HERO -->
-    <section></section>
+    <section>
+      <div class="relative">
+        <div class="relative w-full bg-[#FEF5E8] flex flex-col items-start justify-start">
+          <h1 class="font-serif text-[120px] md:text-[180px] leading-none font-bold pl-2 pt-2" style="
+            background: url('/sharehero.png') center/cover no-repeat;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+          ">SHARE</h1>
+          <img src="/sharehero.png" alt="Hero background" class="w-full h-[340px] md:h-[600px] object-cover -mt-7" />
+        </div>
+      </div>
+    </section>
     <!-- READY TO -->
     <div class="mx-auto px-10 md:px-20">
       <section>
@@ -18,18 +32,18 @@ import Layout from "../layouts/Layout.astro";
         <p class="font-broedtekst font-thin mb-30">Got an instant photo ready for the public? In order to take part in Instant Day:</p>
       </section>
       <!-- HOW TO -->
-      <section class="grid md:grid-cols-2 md:grid-rows-2 max-w-8xl">
+      <section class="grid md:grid-cols-2 md:grid-rows-2 max-w-8xl gap-10 md:gap-20">
         <div class="mb-15 grid md:grid-cols-2">
           <div>
-            <h4 class="mb-5">1. Take a photo</h4>
+            <h4 class="mb-5 text-2xl">1. Take a photo</h4>
             <p class="font-broedtekst font-thin mb-5">Take a photo of your instant with your smartphone (or scan it for max. quality) - the file should be between 2 - 10 MB, in jpg/jpeg or webp format.</p>
           </div>
-          <img class="w-50 mx-auto" src="/share.svg" alt="share" />
+          <img class="w-50 mx-auto" src="/share1.svg" alt="share" />
         </div>
 
         <div class="mb-15 grid md:grid-cols-2">
           <div>
-            <h4 class="mb-5">2. Upload your photo</h4>
+            <h4 class="mb-5 text-2xl">2. Upload your photo</h4>
             <p class="font-broedtekst font-thin mb-5">Upload your photo and credentials on [link til din “share your instants” side]</p>
           </div>
           <img class="w-50 mx-auto" src="/upload1.svg" alt="share" />
@@ -37,18 +51,18 @@ import Layout from "../layouts/Layout.astro";
 
         <div class="mb-15 grid md:grid-cols-2">
           <div>
-            <h4 class="mb-5">3. Agree to terms</h4>
+            <h4 class="mb-5 text-2xl">3. Agree to terms</h4>
             <p class="font-broedtekst font-thin mb-5">Agree to our terms and conditions [link til din “terms and conditions” sektion på “share your instants” siden]. The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.</p>
           </div>
-          <img class="w-50 mx-auto" src="/agree.svg" alt="share" />
+          <img class="w-50 mx-auto" src="/agree1.svg" alt="share" />
         </div>
 
         <div class="mb-15 grid md:grid-cols-2">
           <div>
-            <h4 class="mb-5">4. Make up to 5 submissions</h4>
+            <h4 class="mb-5 text-2xl">4. Make up to 5 submissions</h4>
             <p class="font-broedtekst font-thin mb-5">You can make up to 5 submissions - go through step 1-3 for each submission</p>
           </div>
-          <img class="w-50 mx-auto" src="/submissions.svg" alt="share" />
+          <img class="w-50 mx-auto" src="/hand1.svg" alt="share" />
         </div>
       </section>
     </div>
@@ -117,6 +131,7 @@ import Layout from "../layouts/Layout.astro";
             <button type="submit" class="text-red-600">SUBMIT</button>
             <p id="formMsg" class="hidden text-sm mt-2"></p>
           </form>
+          <Popup />
         </div>
       </div>
     </section>
@@ -204,13 +219,18 @@ import Layout from "../layouts/Layout.astro";
     photoName.textContent = photo.files?.[0]?.name || "";
   });
 
-  // Falsk submit feedback (kan erstattes med rigtig backend)
+  // Submit => vis takke-pop-up
   const form = document.getElementById("instantForm");
   const msg = document.getElementById("formMsg");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    // (Valgfrit: send data via fetch her)
+
     msg.className = "typewriter text-sm mt-2 text-green-700";
     msg.textContent = "Tak! Din indsendelse er modtaget.";
+    window.showThanksPopup(); // <-- VIGTIGT: åbn pop-up
+
     form.reset();
     photoName.textContent = "";
   });
