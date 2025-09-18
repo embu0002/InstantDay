@@ -8,10 +8,10 @@ import Popup from "../components/Popup.astro";
 <Layout>
   <main class="bg-[#FEF5E8]">
     <!-- HERO -->
-    <section>
+    <section class="mb-10 md:mb-20">
       <div class="relative">
         <div class="relative w-full bg-[#FEF5E8] flex flex-col items-start justify-start">
-          <h1 class="font-serif text-[120px] md:text-[180px] leading-none font-bold pl-2 pt-2" style="
+          <h1 class="font-serif text-[100px] md:text-[180px] leading-none font-bold pl-2 pt-2" style="
             background: url('/sharehero.png') center/cover no-repeat;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -25,15 +25,15 @@ import Popup from "../components/Popup.astro";
     <!-- READY TO -->
     <div class="mx-auto px-10 md:px-20">
       <section>
-        <div class="flex flex-row justify-center text-black mb-5">
+        <div class="flex flex-row justify-center text-black mb-5 max-w-4xl">
           <h2 class="font-h2 text-3xl md:text-7xl">READY TO SHARE YOUR INSTANTS?</h2>
           <img class="w-20" src="/shareside.svg" alt="share billede" />
         </div>
         <p class="font-broedtekst font-thin mb-30">Got an instant photo ready for the public? In order to take part in Instant Day:</p>
       </section>
       <!-- HOW TO -->
-      <section class="grid md:grid-cols-2 md:grid-rows-2 max-w-8xl gap-10 md:gap-20">
-        <div class="mb-15 grid md:grid-cols-2">
+      <section class="grid md:grid-cols-2 md:grid-rows-2 max-w-8xl gap-10 md:gap-15">
+        <div class="mb-15 md:mb-2 grid md:grid-cols-2">
           <div>
             <h4 class="mb-5 text-2xl">1. Take a photo</h4>
             <p class="font-broedtekst font-thin mb-5">Take a photo of your instant with your smartphone (or scan it for max. quality) - the file should be between 2 - 10 MB, in jpg/jpeg or webp format.</p>
@@ -41,7 +41,7 @@ import Popup from "../components/Popup.astro";
           <img class="w-50 mx-auto" src="/share1.svg" alt="share" />
         </div>
 
-        <div class="mb-15 grid md:grid-cols-2">
+        <div class="mb-15 md:mb-2 grid md:grid-cols-2">
           <div>
             <h4 class="mb-5 text-2xl">2. Upload your photo</h4>
             <p class="font-broedtekst font-thin mb-5">Upload your photo and credentials on [link til din “share your instants” side]</p>
@@ -49,7 +49,7 @@ import Popup from "../components/Popup.astro";
           <img class="w-50 mx-auto" src="/upload1.svg" alt="share" />
         </div>
 
-        <div class="mb-15 grid md:grid-cols-2">
+        <div class="mb-15 md:mb-2 grid md:grid-cols-2">
           <div>
             <h4 class="mb-5 text-2xl">3. Agree to terms</h4>
             <p class="font-broedtekst font-thin mb-5">Agree to our terms and conditions [link til din “terms and conditions” sektion på “share your instants” siden]. The short version: Participants have to be 18+, portrayed persons must have given consent, and you agree that your instant can be exhibited and used to promote the photo contest.</p>
@@ -57,7 +57,7 @@ import Popup from "../components/Popup.astro";
           <img class="w-50 mx-auto" src="/agree1.svg" alt="share" />
         </div>
 
-        <div class="mb-15 grid md:grid-cols-2">
+        <div class="mb-15 md:mb-2 grid md:grid-cols-2">
           <div>
             <h4 class="mb-5 text-2xl">4. Make up to 5 submissions</h4>
             <p class="font-broedtekst font-thin mb-5">You can make up to 5 submissions - go through step 1-3 for each submission</p>
@@ -71,7 +71,7 @@ import Popup from "../components/Popup.astro";
     <section class="py-16">
       <h2 class="font-broedtekst text-3xl md:text-7xl text-center mb-7 md:mb-20">SUBMIT YOUR INSTANT</h2>
 
-      <div id="envelopeStage" class="relative mx-auto w-[320px] md:w-[520px] scale-125 md:scale-200 transition-all duration-500">
+      <div id="envelopeStage" class="relative mx-auto w-[400px] md:w-[520px] scale-125 md:scale-200 transition-all duration-500">
         <!-- Lukket kuvert -->
         <img class="envelope-img block w-full select-none pointer-events-none" src="/lukketkurvert.png" alt="Lukket kuvert" />
 
@@ -84,10 +84,10 @@ import Popup from "../components/Popup.astro";
         </button>
 
         <!-- Formular-kort ovenpå åben kuvert -->
-        <div id="instantFormWrap" class="form-card absolute left-[82%] top-[0%] -translate-x-1/2 w-[75%] md:w-[65%]
+        <div id="instantFormWrap" class="form-card absolute top-[0%] left-[88%] md:left-[82%] md:top-[0%] -translate-x-1/2 w-[75%] md:w-[65%]
             bg-white/95 shadow-sm p-6 opacity-0 pointer-events-none
             transition-all duration-500">
-          <form id="instantForm" class="typewriter space-y-2 text-sm">
+          <form id="instantForm" class="font-broedtekst space-y-2 text-xs">
             <h3 class="text-lg font-semibold">SHARE YOUR INSTANT</h3>
 
             <!-- Full name -->
